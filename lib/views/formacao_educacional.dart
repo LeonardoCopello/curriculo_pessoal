@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:myresume/components/botao_voltar.dart';
 
 class FormacaoEducacional extends StatelessWidget {
   @override
@@ -30,11 +31,11 @@ class FormacaoEducacional extends StatelessWidget {
                       tileColor: Color(0xFF1A237E),
                       textColor: Colors.white,
                       title: Text(
-                        '\nProprietário de Loja Varejista de Moda Executiva Feminina',
+                        '\nUdemy',
                         style: TextStyle(fontSize: 20),
                       ),
                       subtitle: Text(
-                        '\nEmpresa: D&O Ternos Femininos\n\nGestor administrativo e financeiro. Empreendedor da loja virtual e marketplaces da loja (Meli, Amazon, Magazine Luiza, B2W e Netshoes\n).',
+                        '\n- Em curso - Desenvolvimento em Flutter.\n',
                         style: TextStyle(fontSize: 18),
                         textAlign: TextAlign.left,
                       ),
@@ -44,11 +45,95 @@ class FormacaoEducacional extends StatelessWidget {
                       tileColor: Color(0xFF1A237E),
                       textColor: Colors.white,
                       title: Text(
-                        '\nProprietário de Loja Varejista de Moda Executiva Feminina',
+                        '\nInfinity School',
                         style: TextStyle(fontSize: 20),
                       ),
                       subtitle: Text(
-                        '\nEmpresa: D&O Ternos Femininos\n\nGestor administrativo e financeiro. Empreendedor da loja virtual e marketplaces da loja (Meli, Amazon, Magazine Luiza, B2W e Netshoes\n).',
+                        '\nEm curso - Dev Full Stack (HTML, CSS, JavaSCript, React Native e Python.\n',
+                        style: TextStyle(fontSize: 18),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    ListTile(
+                      tileColor: Color(0xFF1A237E),
+                      textColor: Colors.white,
+                      title: Text(
+                        '\nMaison Française',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      subtitle: Text(
+                        '\nFrancês Completo\n',
+                        style: TextStyle(fontSize: 18),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    ListTile(
+                      tileColor: Color(0xFF1A237E),
+                      textColor: Colors.white,
+                      title: Text(
+                        '\nCCAA - inglês e espanhol',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      subtitle: Text(
+                        '\nEspanhol Avançado\n',
+                        style: TextStyle(fontSize: 18),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    ListTile(
+                      tileColor: Color(0xFF1A237E),
+                      textColor: Colors.white,
+                      title: Text(
+                        '\nPGIC - Pacific Gateway International College',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      subtitle: Text(
+                        '\nImersão inglês no Canadá\n',
+                        style: TextStyle(fontSize: 18),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    ListTile(
+                      tileColor: Color(0xFF1A237E),
+                      textColor: Colors.white,
+                      title: Text(
+                        '\nUniversidade Católica do Salvador',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      subtitle: Text(
+                        '\nbacharel em Administração de Empresas\n',
+                        style: TextStyle(fontSize: 18),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    ListTile(
+                      tileColor: Color(0xFF1A237E),
+                      textColor: Colors.white,
+                      title: Text(
+                        '\nUniversidade Federal da Bahia',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      subtitle: Text(
+                        '\nincompleto em Arquitetura e Urbanismo - 1996 a 1999.\n',
+                        style: TextStyle(fontSize: 18),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    ListTile(
+                      tileColor: Color(0xFF1A237E),
+                      textColor: Colors.white,
+                      title: Text(
+                        '\nEBEC - Escola de inglês',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      subtitle: Text(
+                        '\nIInglês Avançado\n',
                         style: TextStyle(fontSize: 18),
                         textAlign: TextAlign.left,
                       ),
@@ -57,28 +142,7 @@ class FormacaoEducacional extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 30),
-              child: SizedBox(
-                width: 170,
-                height: 50,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF651FFF),
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).pushReplacementNamed('/home');
-                  },
-                  child: Text(
-                    'VOLTAR',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 25,
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            BotaoVoltar(),
           ],
         ),
       ),

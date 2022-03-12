@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:myresume/components/botao_voltar.dart';
 
 class HabilidadesProfissionais extends StatelessWidget {
   @override
@@ -31,13 +32,13 @@ class HabilidadesProfissionais extends StatelessWidget {
                       tileColor: Color(0xFF1A237E),
                       textColor: Colors.white,
                       title: Text(
-                        '\nHabilidades Profissionais',
+                        '\nLinguagem de Programação',
                         style: TextStyle(fontSize: 20),
                       ),
                       subtitle: Text(
-                        '\nLinguagens de Programação:\n\nHTML/CSS, JavaScript e Dart. Ao final do curso: Python e Reactive Native.\n',
+                        '\n- HTML/CSS, JavaScript e Dart\nAo final do curso:\nPython e React Native\n',
                         style: TextStyle(fontSize: 18),
-                        textAlign: TextAlign.left,
+                        textAlign: TextAlign.justify,
                       ),
                     ),
                     SizedBox(height: 10),
@@ -45,41 +46,20 @@ class HabilidadesProfissionais extends StatelessWidget {
                       tileColor: Color(0xFF1A237E),
                       textColor: Colors.white,
                       title: Text(
-                        '\nFrameworks / Sistemas',
+                        '\nFramewors / Sistemas',
                         style: TextStyle(fontSize: 20),
                       ),
                       subtitle: Text(
-                        '\nFlutter, Bootstrap, Visual Studio, GitHub, Adobe PhotoShop e Lightroom.\n',
+                        '\n- Flutter, BootStrap, Visual Studio, GitHub, Adobe PhotoShop e Lightroom.\n',
                         style: TextStyle(fontSize: 18),
-                        textAlign: TextAlign.left,
+                        textAlign: TextAlign.justify,
                       ),
                     ),
                   ],
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 30),
-              child: SizedBox(
-                width: 170,
-                height: 50,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF651FFF),
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).pushReplacementNamed('/home');
-                  },
-                  child: Text(
-                    'VOLTAR',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 25,
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            BotaoVoltar(),
           ],
         ),
       ),

@@ -10,11 +10,7 @@ class MidiasSociais extends StatelessWidget {
   MidiasSociais({required this.link, required this.imagem});
 
   void _customLaunch(command) async {
-    if (await canLaunch(command)) {
       await launch(command);
-    } else {
-      throw 'Could not launch $command';
-    }
   }
 
   @override

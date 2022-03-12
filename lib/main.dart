@@ -5,6 +5,8 @@ import 'package:myresume/components/info_pessoais.dart_topo.dart';
 import 'package:myresume/components/midias_sociais.dart';
 import 'package:myresume/views/formacao_educacional.dart';
 import 'package:myresume/views/objetivos.dart';
+import 'package:myresume/views/perfil_pessoal.dart';
+import 'package:myresume/views/resumo_carreira.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'views/habilidades_profisionais.dart';
 import 'views/titulos_assuntos_curriculo.dart';
@@ -15,6 +17,8 @@ class InfoPessoais extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
       home: HomeResume(), 
       initialRoute: '/',
       routes: {
@@ -23,17 +27,15 @@ class InfoPessoais extends StatelessWidget {
       '/obj': (context) => ObjetivosProfissionais(),
       '/fedu': (context) => FormacaoEducacional(),
       '/hprof': (context) => HabilidadesProfissionais(),
+      '/ppes': (context) => PerfilPessoal(),
+      '/rcar': (context) => ResumoCarreira(),
     });
   }
 }
 
 class HomeResume extends StatelessWidget {
   void _customLaunch(command) async {
-    if (await canLaunch(command)) {
       await launch(command);
-    } else {
-      throw 'Could not launch $command';
-    }
   }
 
   @override
@@ -64,7 +66,7 @@ class HomeResume extends StatelessWidget {
                     primary: Colors.white,
                   ),
                   onPressed: () {
-                    _customLaunch('https://contate.me/LeonardoCopello');
+                    _customLaunch('https://api.whatsapp.com/send?phone=55(71) 99167-3188&text=Olá, ');
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -80,7 +82,7 @@ class HomeResume extends StatelessWidget {
                           fontSize: 20,
                         ),
                       ),
-                      Image.asset('assets/whats.png')
+                      Image.asset('assets/whats.png'),
                     ],
                   ),
                 ),
